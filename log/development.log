@@ -1535,3 +1535,37 @@ Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8b
 
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-02-15 14:53:55 -0500
+
+
+Started GET "/search" for ::1 at 2019-03-07 16:47:51 +0000
+Processing by SearchesController#search as HTML
+Redirected to https://foursquare.com/oauth2/authenticate?client_id=OF2L0KMZZSHJRDLYCNJBOWS24FMKBHPFE03PMQKLTLLRO0ZK&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fauth
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 302 Found in 9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/auth?code=XZCH32EFRCESOVUL42YQWJTYABEJO1ZHUR5GLSPVBREMLJUC" for ::1 at 2019-03-07 16:48:00 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"XZCH32EFRCESOVUL42YQWJTYABEJO1ZHUR5GLSPVBREMLJUC"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1304ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-03-07 16:48:02 +0000
+Processing by SearchesController#search as HTML
+  Rendered searches/search.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 328ms (Views: 327.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/search" for ::1 at 2019-03-07 16:48:07 +0000
+Processing by SearchesController#foursquare as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6cX7H63aFRbvgQFesZeyjhBqO3VzxZcYkWaDm0CM84BlLGYs01hZqYtaXna3xy+f60vsQrP5boclrL1p232ohw==", "zipcode"=>"94521", "commit"=>"Search!"}
+  Rendered searches/search.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 436ms (Views: 27.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/search" for ::1 at 2019-03-07 16:48:32 +0000
+Processing by SearchesController#foursquare as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZiD9qteXaTx+7bBI6nuvzc0d6UApnT3ztGDtXsMi5xjqyWCZqRUlgxo272DsKzLcNjw+d+mhxGwAqtOsWNO8Hw==", "zipcode"=>"M1 7XN", "commit"=>"Search!"}
+  Rendered searches/search.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 381ms (Views: 18.0ms | ActiveRecord: 0.0ms)
